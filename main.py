@@ -66,6 +66,10 @@ numerical_cols = df.select_dtypes(include=['float64', 'int64']).columns
 df.head()
 df.info()
 
+# Basic statistics
+print("Summary Statistics:")
+print(df.describe())
+
 # Price distribution
 plt.figure(figsize=(8, 5))
 sns.histplot(df['price'], bins=50, kde=True)
@@ -130,7 +134,7 @@ print(
     "1. Most listings are clustered at lower price points, with a long tail extending to the right due to a few exceptionally high-priced listings.")
 print("2. The most popular location that attract the most bookings is the \"Sixth Ward\".")
 print(
-    "3. Availability varies widely, with some listings offering year-round access while others are only available for a short period")
+    "3. Availability varies widely, with some listings offering year-round access while others are only available for a short period.")
 print("4. Entire homes have the highest booking rate among all room types.")
 print(
     "5. Some neighborhoods have higher median prices, and the Fifteenth Ward stands out with the highest median price.")
